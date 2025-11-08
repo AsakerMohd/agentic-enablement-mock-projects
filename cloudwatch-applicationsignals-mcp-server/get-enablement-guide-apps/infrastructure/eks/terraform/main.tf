@@ -237,7 +237,7 @@ resource "kubernetes_service" "app" {
       target_port = var.port
     }
 
-    type = "LoadBalancer"
+    type = "ClusterIP"
   }
 
   depends_on = [kubernetes_deployment.app]

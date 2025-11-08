@@ -39,7 +39,7 @@ Deploy the Python Flask sample application to Amazon EKS using Terraform.
 
 6. **Configure kubectl:**
    ```bash
-   aws eks update-kubeconfig --region us-west-1 --name python-flask-eks-cluster
+   aws eks update-kubeconfig --region us-east-1 --name python-flask-eks-terraform-cluster
    ```
 
 7. **Verify deployment:**
@@ -50,7 +50,7 @@ Deploy the Python Flask sample application to Amazon EKS using Terraform.
 
 8. **Get LoadBalancer URL:**
    ```bash
-   kubectl get service python-flask-eks-service -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'
+   kubectl get service python-flask-eks-terraform-service -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'
    ```
 
 ## Clean Up
